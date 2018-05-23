@@ -1,4 +1,4 @@
-# React Native Web with Typescript
+# React Native Web with TypeScript
 
 ## install
 
