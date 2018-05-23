@@ -1,0 +1,60 @@
+{
+  "name": "example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "web": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "test": "jest --coverage",
+    "lint": "tslint -c tslint.json 'src/**/*.ts{,x}'",
+    "rebuild": "rm -rf ios; rm -rf android; react-native upgrade; rm -f .babelrc; rm -f .buckconfig; rm -f .flowconfig; rm -f .watchmanconfig; rm -f .gitattributes;"
+  },
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-native": "0.55.4",
+    "react-native-web": "^0.7.2",
+    "react-scripts-ts": "^2.16.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/react": "^16.3.14",
+    "@types/react-native": "^0.55.15",
+    "@types/react-test-renderer": "^16.0.1",
+    "babel-jest": "22.4.4",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.4",
+    "prettier": "^1.12.1",
+    "react-art": "^16.3.2",
+    "react-native-typescript-transformer": "^1.2.5",
+    "react-test-renderer": "^16.3.2",
+    "ts-jest": "^22.4.6",
+    "typescript": "^2.8.3"
+  },
+  "babel": {
+    "presets": ["react-native"]
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "useBabelrc": true
+      }
+    }
+  }
+}
