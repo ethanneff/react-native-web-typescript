@@ -1,6 +1,25 @@
 import * as React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 
+// styles
+const styles = StyleSheet.create({
+  root: {
+    alignItems: "center",
+    alignSelf: "center"
+  },
+  buttons: {
+    flexDirection: "row"
+  },
+  button: {
+    flex: 1,
+    paddingVertical: 0
+  },
+  greeting: {
+    color: "#999",
+    fontWeight: "bold"
+  }
+});
+
 export interface IProps {
   name: string;
   enthusiasmLevel?: number;
@@ -10,14 +29,12 @@ interface IState {
   enthusiasmLevel: number;
 }
 
-export default class Hello extends React.Component<IProps, IState> {
+class Hello extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
-
     if ((props.enthusiasmLevel || 0) <= 0) {
       throw new Error("You could be a little more enthusiastic. :D");
     }
-
     this.state = {
       enthusiasmLevel: props.enthusiasmLevel || 1
     };
@@ -25,11 +42,13 @@ export default class Hello extends React.Component<IProps, IState> {
 
   public onIncrement = () =>
     this.setState({ enthusiasmLevel: this.state.enthusiasmLevel + 1 });
+
   public onDecrement = () =>
     this.setState({
       enthusiasmLevel:
         this.state.enthusiasmLevel - 1 > 0 ? this.state.enthusiasmLevel - 1 : 0
     });
+
   public getExclamationMarks = (numChars: number) =>
     Array(numChars + 1).join("!");
 
@@ -64,21 +83,4 @@ export default class Hello extends React.Component<IProps, IState> {
   }
 }
 
-// styles
-const styles = StyleSheet.create({
-  root: {
-    alignItems: "center",
-    alignSelf: "center"
-  },
-  buttons: {
-    flexDirection: "row"
-  },
-  button: {
-    flex: 1,
-    paddingVertical: 0
-  },
-  greeting: {
-    color: "#999",
-    fontWeight: "bold"
-  }
-});
+export default Hello;
