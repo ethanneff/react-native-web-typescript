@@ -12,26 +12,26 @@
     "rebuild": "rm -rf ios; rm -rf android; react-native upgrade; rm -f .babelrc; rm -f .buckconfig; rm -f .flowconfig; rm -f .watchmanconfig; rm -f .gitattributes;"
   },
   "dependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "react-native": "0.55.4",
-    "react-native-web": "^0.7.2",
+    "react-native-web": "^0.8.3",
     "react-scripts-ts": "^2.16.0"
   },
   "devDependencies": {
-    "@types/jest": "^22.2.3",
-    "@types/react": "^16.3.14",
-    "@types/react-native": "^0.55.15",
+    "@types/jest": "^23.0.0",
+    "@types/react": "^16.3.17",
+    "@types/react-native": "^0.55.17",
     "@types/react-test-renderer": "^16.0.1",
-    "babel-jest": "22.4.4",
+    "babel-jest": "23.0.1",
     "babel-preset-react-native": "4.0.0",
-    "jest": "22.4.4",
-    "prettier": "^1.12.1",
-    "react-art": "^16.3.2",
-    "react-native-typescript-transformer": "^1.2.5",
-    "react-test-renderer": "^16.3.2",
+    "jest": "23.1.0",
+    "prettier": "^1.13.4",
+    "react-art": "^16.4.0",
+    "react-native-typescript-transformer": "^1.2.9",
+    "react-test-renderer": "^16.4.0",
     "ts-jest": "^22.4.6",
-    "typescript": "^2.8.3"
+    "typescript": "^2.9.1"
   },
   "babel": {
     "presets": ["react-native"]
