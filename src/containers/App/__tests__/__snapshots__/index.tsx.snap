@@ -101,12 +101,7 @@ Cmd+D or shake for dev menu
             ]
           }
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -118,8 +113,6 @@ Cmd+D or shake for dev menu
               "opacity": 1,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <View
             style={
@@ -131,7 +124,6 @@ Cmd+D or shake for dev menu
             <Text
               accessible={true}
               allowFontScaling={true}
-              disabled={undefined}
               ellipsizeMode="tail"
               style={
                 Array [
@@ -166,12 +158,7 @@ Cmd+D or shake for dev menu
             ]
           }
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -183,8 +170,6 @@ Cmd+D or shake for dev menu
               "opacity": 1,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <View
             style={
@@ -196,7 +181,6 @@ Cmd+D or shake for dev menu
             <Text
               accessible={true}
               allowFontScaling={true}
-              disabled={undefined}
               ellipsizeMode="tail"
               style={
                 Array [
