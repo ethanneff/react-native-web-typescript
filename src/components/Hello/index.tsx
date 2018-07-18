@@ -32,9 +32,7 @@ interface IState {
 class Hello extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
-    if ((props.enthusiasmLevel || 0) <= 0) {
-      throw new Error("You could be a little more enthusiastic. :D");
-    }
+
     this.state = {
       enthusiasmLevel: props.enthusiasmLevel || 1
     };

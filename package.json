@@ -8,33 +8,35 @@
     "ios": "react-native run-ios",
     "android": "react-native run-android",
     "test": "jest --coverage",
-    "lint": "tslint -c tslint.json 'src/**/*.ts{,x}'",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
     "rebuild": "rm -rf ios; rm -rf android; react-native upgrade; rm -f .babelrc; rm -f .buckconfig; rm -f .flowconfig; rm -f .watchmanconfig; rm -f .gitattributes;"
   },
   "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-native": "0.55.4",
-    "react-native-web": "^0.8.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-native": "0.56.0",
+    "react-native-web": "^0.8.8",
     "react-scripts-ts": "^2.16.0"
   },
   "devDependencies": {
-    "@types/jest": "^23.0.0",
-    "@types/react": "^16.3.17",
-    "@types/react-native": "^0.55.17",
+    "@types/jest": "^23.3.0",
+    "@types/react": "^16.4.6",
+    "@types/react-native": "^0.56.3",
     "@types/react-test-renderer": "^16.0.1",
-    "babel-jest": "23.0.1",
+    "babel-jest": "23.4.0",
     "babel-preset-react-native": "4.0.0",
-    "jest": "23.1.0",
-    "prettier": "^1.13.4",
-    "react-art": "^16.4.0",
-    "react-native-typescript-transformer": "^1.2.9",
-    "react-test-renderer": "^16.4.0",
-    "ts-jest": "^22.4.6",
-    "typescript": "^2.9.1"
+    "jest": "23.4.1",
+    "prettier": "^1.13.7",
+    "react-art": "^16.4.1",
+    "react-native-typescript-transformer": "^1.2.10",
+    "react-test-renderer": "^16.4.1",
+    "ts-jest": "^23.0.1",
+    "typescript": "^2.9.2"
   },
   "babel": {
-    "presets": ["react-native"]
+    "presets": [
+      "react-native"
+    ]
   },
   "jest": {
     "preset": "react-native",

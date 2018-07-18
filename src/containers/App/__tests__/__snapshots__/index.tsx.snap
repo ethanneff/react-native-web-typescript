@@ -12,9 +12,6 @@ exports[`renders correctly 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "fontSize": 20,
@@ -26,9 +23,6 @@ exports[`renders correctly 1`] = `
     Welcome to React Native!
   </Text>
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#333333",
@@ -37,12 +31,9 @@ exports[`renders correctly 1`] = `
       }
     }
   >
-    To get started, edit App.js
+    To get started, edit ./src/containers/App/index.tsx
   </Text>
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "#333333",
@@ -63,9 +54,6 @@ Cmd+D or shake for dev menu
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#999",
@@ -75,7 +63,7 @@ Cmd+D or shake for dev menu
     >
       Hello
        
-      bob!
+      Human!
     </Text>
     <View
       style={
@@ -122,9 +110,6 @@ Cmd+D or shake for dev menu
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -179,9 +164,6 @@ Cmd+D or shake for dev menu
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
