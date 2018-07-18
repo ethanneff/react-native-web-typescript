@@ -8,13 +8,6 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
     "skipLibCheck": true
   },
   "include": ["src/**/*"],

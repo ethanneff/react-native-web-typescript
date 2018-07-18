@@ -1,6 +1,6 @@
 import * as React from "react";
 import { create } from "react-test-renderer";
-import Hello from "../";
+import Hello, { IState } from "../";
 
 describe("Hello", () => {
   it("renders correctly with defaults", () => {
@@ -9,28 +9,31 @@ describe("Hello", () => {
   });
 
   it("increments", () => {
-    const button = create(
+    const button: any = create(
       <Hello name="World" enthusiasmLevel={1} />
     ).getInstance();
     button.onIncrement();
     button.onIncrement();
-    expect(button.state.enthusiasmLevel).toBe(3);
+    const state: IState = button.state;
+    expect(state.enthusiasmLevel).toBe(3);
   });
 
   it("decrements", () => {
-    const button = create(
+    const button: any = create(
       <Hello name="World" enthusiasmLevel={4} />
     ).getInstance();
     button.onDecrement();
     button.onDecrement();
-    expect(button.state.enthusiasmLevel).toBe(2);
+    const state: IState = button.state;
+    expect(state.enthusiasmLevel).toBe(2);
   });
 
   it("decrements at zero", () => {
-    const button = create(
+    const button: any = create(
       <Hello name="World" enthusiasmLevel={0} />
     ).getInstance();
     button.onDecrement();
-    expect(button.state.enthusiasmLevel).toBe(0);
+    const state: IState = button.state;
+    expect(state.enthusiasmLevel).toBe(0);
   });
 });

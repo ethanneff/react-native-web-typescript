@@ -25,14 +25,13 @@ export interface IProps {
   enthusiasmLevel?: number;
 }
 
-interface IState {
+export interface IState {
   enthusiasmLevel: number;
 }
 
 class Hello extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
-
     this.state = {
       enthusiasmLevel: props.enthusiasmLevel || 1
     };
