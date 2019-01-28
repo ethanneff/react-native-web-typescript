@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Hello renders correctly with defaults 1`] = `
+exports[`Welcome renders correctly with defaults 1`] = `
 <View
   style={
     Object {
@@ -37,13 +37,9 @@ exports[`Hello renders correctly with defaults 1`] = `
       }
     >
       <View
-        accessibilityComponentType="button"
         accessibilityLabel="decrement"
-        accessibilityTraits={
-          Array [
-            "button",
-          ]
-        }
+        accessibilityRole="button"
+        accessibilityStates={Array []}
         accessible={true}
         isTVSelectable={true}
         onResponderGrant={[Function]}
@@ -91,13 +87,9 @@ exports[`Hello renders correctly with defaults 1`] = `
       }
     >
       <View
-        accessibilityComponentType="button"
         accessibilityLabel="increment"
-        accessibilityTraits={
-          Array [
-            "button",
-          ]
-        }
+        accessibilityRole="button"
+        accessibilityStates={Array []}
         accessible={true}
         isTVSelectable={true}
         onResponderGrant={[Function]}

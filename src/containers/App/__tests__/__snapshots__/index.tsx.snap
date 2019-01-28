@@ -81,13 +81,9 @@ Cmd+D or shake for dev menu
         }
       >
         <View
-          accessibilityComponentType="button"
           accessibilityLabel="decrement"
-          accessibilityTraits={
-            Array [
-              "button",
-            ]
-          }
+          accessibilityRole="button"
+          accessibilityStates={Array []}
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -135,13 +131,9 @@ Cmd+D or shake for dev menu
         }
       >
         <View
-          accessibilityComponentType="button"
           accessibilityLabel="increment"
-          accessibilityTraits={
-            Array [
-              "button",
-            ]
-          }
+          accessibilityRole="button"
+          accessibilityStates={Array []}
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}

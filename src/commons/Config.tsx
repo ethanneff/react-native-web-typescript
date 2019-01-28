@@ -1,4 +1,4 @@
-interface IConfig {
+interface Config {
   app: {
     name: string;
   };
@@ -12,7 +12,7 @@ interface IConfig {
   };
 }
 
-const Config: IConfig = {
+export const Config: Config = {
   app: {
     name: "example"
   },
@@ -25,5 +25,3 @@ const Config: IConfig = {
     root: "root"
   }
 };
-
-export default Config;
