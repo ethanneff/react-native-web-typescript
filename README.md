@@ -1,5 +1,7 @@
 # React Native Web with TypeScript
 
+![image](https://i.imgur.com/sa5z3DR.gif)
+
 ## install
 
 ```sh
