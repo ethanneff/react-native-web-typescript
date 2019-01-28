@@ -3,47 +3,50 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "web": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
+    "web": "react-scripts start",
+    "build": "react-scripts build",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
     "test": "jest --coverage",
-    "lint": "tslint -p tsconfig.json -c tslint.json",
-    "rebuild": "rm -rf ios; rm -rf android; react-native upgrade; rm -f .babelrc; rm -f .buckconfig; rm -f .flowconfig; rm -f .watchmanconfig; rm -f .gitattributes;"
+    "watch": "jest --watch",
+    "lint": "tsc && tslint --fix -p tsconfig.json -c tslint.json"
   },
   "dependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-native": "0.56.0",
-    "react-native-web": "^0.8.8",
-    "react-scripts-ts": "^2.16.0"
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "react-native": "0.57.8",
+    "react-native-web": "0.10.0-alpha.3",
+    "react-scripts": "2.1.3"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.0",
-    "@types/react": "^16.4.6",
-    "@types/react-native": "^0.56.3",
-    "@types/react-test-renderer": "^16.0.1",
-    "babel-jest": "23.4.0",
-    "babel-preset-react-native": "4.0.0",
-    "jest": "23.4.1",
-    "prettier": "^1.13.7",
-    "react-art": "^16.4.1",
-    "react-native-typescript-transformer": "^1.2.10",
-    "react-test-renderer": "^16.4.1",
-    "ts-jest": "^23.0.1",
-    "typescript": "^2.9.2"
+    "@types/jest": "23.3.13",
+    "@types/react": "16.7.21",
+    "@types/react-native": "0.57.32",
+    "@types/react-test-renderer": "16.0.3",
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "prettier": "1.16.1",
+    "react-art": "16.7.0",
+    "react-test-renderer": "16.7.0",
+    "ts-jest": "23.10.5",
+    "tslint": "5.12.1",
+    "tslint-config-prettier": "1.17.0",
+    "typescript": "3.2.4"
   },
   "babel": {
     "presets": [
-      "react-native"
+      "module:metro-react-native-babel-preset"
     ]
   },
   "jest": {
     "preset": "react-native",
     "transform": {
-      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.(jsx?)$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
       "^.+\\.tsx?$": "ts-jest"
     },
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|react-router-native)/"
+    ],
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
@@ -54,9 +57,16 @@
       "node"
     ],
     "globals": {
+      "window": true,
       "ts-jest": {
-        "useBabelrc": true
+        "tsConfig": "./tsconfig.jest.json"
       }
     }
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
