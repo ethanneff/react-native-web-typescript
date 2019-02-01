@@ -2,20 +2,20 @@ import * as React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 
 const styles = StyleSheet.create({
-  root: {
-    alignItems: "center",
-    alignSelf: "center"
-  },
-  buttons: {
-    flexDirection: "row"
-  },
   button: {
     flex: 1,
     paddingVertical: 0
   },
+  buttons: {
+    flexDirection: "row"
+  },
   greeting: {
     color: "#999",
     fontWeight: "bold"
+  },
+  root: {
+    alignItems: "center",
+    alignSelf: "center"
   }
 });
 
