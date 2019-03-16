@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Platform, StyleSheet, View } from "react-native";
+import { Platform, SafeAreaView, StyleSheet } from "react-native";
 import { Instructions, Welcome } from "../../components";
 
 const styles = StyleSheet.create({
@@ -20,9 +20,9 @@ export const App = () => {
   });
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Instructions instructions={instructions} />
       <Welcome name="Human" enthusiasmLevel={1} />
-    </View>
+    </SafeAreaView>
   );
 };

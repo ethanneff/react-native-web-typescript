@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<View
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
   style={
     Object {
       "alignItems": "center",
@@ -174,5 +175,5 @@ Cmd+D or shake for dev menu
       </View>
     </View>
   </View>
-</View>
+</RCTSafeAreaView>
 `;

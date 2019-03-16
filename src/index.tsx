@@ -1,7 +1,7 @@
-// app and web entry
+// app entry
 import { AppRegistry, Platform } from "react-native";
-import { Config } from "./commons";
-import { App } from "./containers";
+import { App } from "./screens";
+import { Config } from "./utils";
 
 // register the app
 AppRegistry.registerComponent(Config.app.name, () => App);
