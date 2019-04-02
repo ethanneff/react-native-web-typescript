@@ -13,26 +13,26 @@
     "reset": "watchman watch-del-all; rm -rf /tmp/metro-bundler-cache-*; rm -rf ./android/build; rm -rf ./android/.gradle; rm -rf ./android/app/build; rm -rf ~/Library/Developer/Xcode/DerivedData; rm -rf /tmp/haste-map-react-native-packager-*; rm -rf ./ios/build; yarn install; pod install --project-directory=ios; react-native start --reset-cache"
   },
   "dependencies": {
-    "react": "16.8.4",
-    "react-dom": "16.8.4",
-    "react-native": "0.59.1",
-    "react-native-web": "0.11.1",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-native": "0.59.3",
+    "react-native-web": "0.11.2",
     "react-scripts": "2.1.8"
   },
   "devDependencies": {
     "@types/jest": "24.0.11",
-    "@types/react": "16.8.8",
-    "@types/react-native": "0.57.40",
+    "@types/react": "16.8.10",
+    "@types/react-native": "0.57.42",
     "@types/react-test-renderer": "16.8.1",
     "babel-jest": "23.6.0",
     "jest": "23.6.0",
     "prettier": "1.16.4",
-    "react-art": "16.8.4",
-    "react-test-renderer": "16.8.4",
-    "ts-jest": "24.0.0",
-    "tslint": "5.14.0",
+    "react-art": "16.8.6",
+    "react-test-renderer": "16.8.6",
+    "ts-jest": "24.0.1",
+    "tslint": "5.15.0",
     "tslint-config-prettier": "1.18.0",
-    "typescript": "3.3.3333"
+    "typescript": "3.4.1"
   },
   "babel": {
     "presets": [
