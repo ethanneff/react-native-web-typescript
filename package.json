@@ -17,22 +17,22 @@
     "react-dom": "16.8.6",
     "react-native": "0.59.5",
     "react-native-web": "0.11.2",
-    "react-scripts": "2.1.8"
+    "react-scripts": "3.0.0"
   },
   "devDependencies": {
-    "@types/jest": "24.0.11",
-    "@types/react": "16.8.14",
-    "@types/react-native": "0.57.47",
+    "@types/jest": "24.0.12",
+    "@types/react": "16.8.15",
+    "@types/react-native": "0.57.51",
     "@types/react-test-renderer": "16.8.1",
-    "babel-jest": "23.6.0",
-    "jest": "23.6.0",
+    "babel-jest": "24.7.1",
+    "jest": "24.7.1",
     "prettier": "1.17.0",
     "react-art": "16.8.6",
     "react-test-renderer": "16.8.6",
     "ts-jest": "24.0.2",
     "tslint": "5.16.0",
     "tslint-config-prettier": "1.18.0",
-    "typescript": "3.4.4"
+    "typescript": "3.4.5"
   },
   "babel": {
     "presets": [
