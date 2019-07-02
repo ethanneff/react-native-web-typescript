@@ -15,7 +15,7 @@
   "dependencies": {
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-native": "0.59.5",
+    "react-native": "0.59.10",
     "react-native-web": "0.11.2",
     "react-scripts": "3.0.0"
   },
