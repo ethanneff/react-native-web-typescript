@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
 export const Main = memo(function Main() {
   return (
     <View style={styles.container}>
-      <Text>react native with web and typecript</Text>
+      <Text>react native with web and typescript</Text>
     </View>
   );
 });
