@@ -3,72 +3,63 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "web": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-native start",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
-    "test": "jest --coverage",
-    "watch": "jest --watch",
-    "lint": "tsc && tslint --fix -p tsconfig.json -c tslint.json",
-    "reset": "watchman watch-del-all; rm -rf /tmp/metro-bundler-cache-*; rm -rf ./android/build; rm -rf ./android/.gradle; rm -rf ./android/app/build; rm -rf ~/Library/Developer/Xcode/DerivedData; rm -rf /tmp/haste-map-react-native-packager-*; rm -rf ./ios/build; yarn install; pod install --project-directory=ios; react-native start --reset-cache"
+    "web": "react-scripts start",
+    "build": "react-scripts build",
+    "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'",
+    "lint": "eslint 'src/**/*.[jt]s?(x)' && tsc",
+    "test": "jest -u --forceExit --coverage --verbose --detectOpenHandles",
+    "watch": "npm run test -- --watchAll"
   },
   "dependencies": {
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-native": "0.59.5",
-    "react-native-web": "0.11.2",
-    "react-scripts": "3.0.0"
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-native": "0.60.5",
+    "react-native-web": "0.11.7",
+    "react-scripts": "3.1.1"
   },
   "devDependencies": {
-    "@types/jest": "24.0.12",
-    "@types/react": "16.8.15",
-    "@types/react-native": "0.57.51",
-    "@types/react-test-renderer": "16.8.1",
-    "babel-jest": "24.7.1",
-    "jest": "24.7.1",
-    "prettier": "1.17.0",
-    "react-art": "16.8.6",
+    "@babel/core": "7.5.5",
+    "@babel/runtime": "7.5.5",
+    "@react-native-community/eslint-config": "0.0.5",
+    "@types/jest": "24.0.17",
+    "@types/react": "16.9.2",
+    "@types/react-native": "0.60.6",
+    "@types/react-test-renderer": "16.9.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "babel-jest": "24.9.0",
+    "eslint": "6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "jest": "24.8.0",
+    "metro-react-native-babel-preset": "0.56.0",
     "react-test-renderer": "16.8.6",
-    "ts-jest": "24.0.2",
-    "tslint": "5.16.0",
-    "tslint-config-prettier": "1.18.0",
-    "typescript": "3.4.5"
-  },
-  "babel": {
-    "presets": [
-      "module:metro-react-native-babel-preset"
-    ]
+    "typescript": "3.5.3"
   },
   "jest": {
     "preset": "react-native",
-    "transform": {
-      "^.+\\.(jsx?)$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "transformIgnorePatterns": [
-      "node_modules/(?!react-native|react-router-native)/"
-    ],
-    "testMatch": [
-      "**/__tests__/**/*.[jt]s?(x)"
-    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
       "js",
       "jsx",
-      "json"
-    ],
-    "globals": {
-      "window": true,
-      "ts-jest": {
-        "tsConfig": "./tsconfig.jest.json"
-      }
-    }
+      "json",
+      "node"
+    ]
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
