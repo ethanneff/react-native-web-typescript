@@ -2,6 +2,16 @@
 
 ![image](https://i.imgur.com/sa5z3DR.gif)
 
+### featuring
+
+- iOS
+- Android
+- Web
+- Typescript
+- React-Navigation
+- Jest
+- Eslint
+
 ### install brew
 
 ```sh
