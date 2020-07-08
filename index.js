@@ -1,2 +1,2 @@
-import { Main } from './src';
-export default Main;
+import {App} from './src';
+export default App;
