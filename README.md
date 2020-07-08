@@ -2,7 +2,7 @@
 
 ![image](https://i.imgur.com/sa5z3DR.gif)
 
-### featuring
+### Featuring
 
 - iOS
 - Android
@@ -12,13 +12,13 @@
 - Jest
 - Eslint
 
-### install brew
+### Install brew
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-### install dependencies
+### Install dependencies
 
 ```sh
 brew install node
@@ -27,7 +27,7 @@ sudo gem install cocoapods
 npm i -g yarn
 ```
 
-### install code
+### Install code
 
 ```sh
 git clone git@github.com:ethanneff/react-native-web-typescript.git
@@ -37,7 +37,7 @@ cd ios
 pod install
 ```
 
-### run
+### Run
 
 ```sh
 yarn ios
@@ -51,19 +51,19 @@ yarn android
 yarn web
 ```
 
-### lint
+### Lint
 
 ```sh
 yarn lint
 ```
 
-### test
+### Test
 
 ```sh
 yarn test
 ```
 
-### deploy
+### Deploy
 
 ```sh
 yarn build
