@@ -3,15 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "react-native start",
-    "ios": "react-native run-ios",
     "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
     "web": "react-scripts start",
     "build": "react-scripts build",
-    "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'",
-    "lint": "eslint 'src/**/*.[jt]s?(x)' && tsc",
-    "test": "jest -u --forceExit --coverage --verbose --detectOpenHandles",
-    "watch": "npm run test -- --watchAll"
+    "test": "jest -u --forceExit --coverage --detectOpenHandles",
+    "watch": "jest -u --forceExit --detectOpenHandles --watchAll",
+    "lint": "tsc && eslint '**/*.[jt]s?(x)' --cache --fix",
+    "reset": "watchman watch-del-all; rm -rf /tmp/metro-bundler-cache-*; rm -rf ./android/build; rm -rf ./android/.gradle; rm -rf ./android/app/build; rm -rf ~/Library/Developer/Xcode/DerivedData; rm -rf /tmp/haste-map-react-native-packager-*; rm -rf ./ios/build; jest --clearCache; cd ios; pod install --repo-update; cd ..; npx jetify; cd android; ./gradlew clean; cd ..; react-native start --reset-cache"
   },
   "dependencies": {
     "react": "16.9.0",
