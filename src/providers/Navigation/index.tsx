@@ -1,3 +1,7 @@
+const linking = {
+  prefixes: ['https://app.example.com', 'mychat://'],
+};
+
 const SignInStack = () => (
   <Stack.Navigator>
     <Stack.Screen name="Landing" component={Landing} />
@@ -8,6 +12,8 @@ const SignInStack = () => (
 );
   const token = useRootSelector((state) => state.auth.token);
   const appStack = token ? MainStack : SignInStack;
+      linking={linking}
+      fallback={<Loading />}>
       <Stack.Navigator mode={rootMode} screenOptions={rootScreenOptions}>
         <Stack.Screen
           name="GlobalNotification"
