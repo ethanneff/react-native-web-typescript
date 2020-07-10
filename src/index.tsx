@@ -1,9 +1,16 @@
 import React from 'react';
 import {AppRegistry, Platform} from 'react-native';
-import {Navigation} from './navigation';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {Redux, Navigation} from './providers';
 
 export function App() {
-  return <Navigation />;
+  return (
+    <Redux>
+      <SafeAreaProvider>
+        <Navigation />
+      </SafeAreaProvider>
+    </Redux>
+  );
 }
 
 AppRegistry.registerComponent('example', () => App);
