@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react';
 import {View} from 'react-native';
-import {styles} from './styles';
+import {Theme} from '../../utils';
 
 type Props = {
   children: ReactNode | ReactNode[];
@@ -9,7 +9,7 @@ type Props = {
 
 export function Container({children, testID}: Props) {
   return (
-    <View style={styles.center} testID={testID}>
+    <View style={Theme.center} testID={testID}>
       {children}
     </View>
   );
