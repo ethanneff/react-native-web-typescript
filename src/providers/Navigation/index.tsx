@@ -1,3 +1,27 @@
+import './GestureHandler';
+import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {
+  Home,
+  Details,
+  Settings,
+  GlobalAlert,
+  GlobalNotification,
+  Landing,
+  SignIn,
+  SignUp,
+  ForgotPassword,
+} from '../../screens';
+import {rootScreenOptions, rootMode} from './configs';
+import {StackParams} from './params';
+import {useRootSelector} from '../Redux';
+import {Loading} from '../../components';
+import {usePersistedState} from './usePersistedState';
+
+const Stack = createStackNavigator<StackParams>();
+const Tab = createBottomTabNavigator();
 const linking = {
   prefixes: ['https://app.example.com', 'mychat://'],
 };
