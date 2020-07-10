@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, Button} from 'react-native';
-import {StackParams} from '../../navigation';
+import {StackParams} from '../../providers/Navigation/params';
 import {Container} from '../../components';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
@@ -16,6 +16,16 @@ export function Home() {
         testID="details"
         title="Go to Details"
         onPress={() => navigate('Details', {data: '🤪'})}
+      />
+      <Button
+        testID="alert"
+        title="show alert"
+        onPress={() => navigate('GlobalAlert')}
+      />
+      <Button
+        testID="modal"
+        title="show notification"
+        onPress={() => navigate('GlobalNotification')}
       />
     </Container>
   );
