@@ -36,6 +36,14 @@ const MainStack = () => (
 export const Navigation = () => {
   const token = useRootSelector((state) => state.auth.token);
   const appStack = token ? MainStack : SignInStack;
+  const {initialState, isReady, onStateChange} = usePersistedState();
+
+  return !isReady ? (
+    <Loading />
+  ) : (
+    <NavigationContainer
+      initialState={initialState}
+      onStateChange={onStateChange}
       linking={linking}
       fallback={<Loading />}>
       <Stack.Navigator mode={rootMode} screenOptions={rootScreenOptions}>
@@ -46,3 +54,6 @@ export const Navigation = () => {
         />
         <Stack.Screen name="GlobalAlert" component={GlobalAlert} />
       </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
