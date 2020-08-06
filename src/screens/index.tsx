@@ -7,3 +7,4 @@ export * from './SignUp';
 export * from './SignIn';
 export * from './ForgotPassword';
 export * from './Landing';
+export * from './Profile';

@@ -1,18 +1,35 @@
-import {useState, useEffect, useCallback} from 'react';
+import {useState, useEffect, useCallback, useRef} from 'react';
 import {Linking, Platform} from 'react-native';
-import {NavigationState} from '@react-navigation/native';
+import {
+  NavigationState,
+  NavigationContainerRef,
+} from '@react-navigation/native';
 import AsyncStorage from '@react-native-community/async-storage';
 
 const persistanceKey = 'NAVIGATION_STATE';
 export const usePersistedState = () => {
+  const routeNameRef = useRef<string | null>(null);
+  const navigationRef = useRef<NavigationContainerRef | null | any>(null);
   const [isReady, setIsReady] = useState(false);
   const [initialState, setInitialState] = useState();
 
-  const onStateChange = useCallback(
-    (state: NavigationState | undefined) =>
-      AsyncStorage.setItem(persistanceKey, JSON.stringify(state)),
-    [],
-  );
+  const onStateChange = useCallback((state: NavigationState | undefined) => {
+    const previousRouteName = routeNameRef.current;
+    const currentRouteName = navigationRef.current.getCurrentRoute().name;
+
+    if (previousRouteName !== currentRouteName) {
+      console.log(currentRouteName);
+    }
+
+    routeNameRef.current = currentRouteName;
+    AsyncStorage.setItem(persistanceKey, JSON.stringify(state));
+  }, []);
+
+  const onRef = (ref: NavigationContainerRef) => (navigationRef.current = ref);
+
+  const onReady = () => {
+    routeNameRef.current = navigationRef.current.getCurrentRoute().name;
+  };
 
   const restoreState = useCallback(async () => {
     try {
@@ -40,5 +57,5 @@ export const usePersistedState = () => {
     restoreState();
   }, [isReady, restoreState]);
 
-  return {isReady, initialState, onStateChange};
+  return {isReady, initialState, onStateChange, onReady, onRef};
 };

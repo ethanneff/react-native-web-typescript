@@ -7,6 +7,7 @@ import {
   Home,
   Details,
   Settings,
+  Profile,
   GlobalAlert,
   GlobalNotification,
   Landing,
@@ -48,11 +49,17 @@ const SettingsStack = () => (
   </Stack.Navigator>
 );
 
+const ProfileStack = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="Profile" component={Profile} />
+  </Stack.Navigator>
+);
+
 // TODO: handle better
 const MainStack = () => (
   <Tab.Navigator>
     <Tab.Screen name="Home" component={HomeStack} />
-    <Tab.Screen name="Profile" component={SettingsStack} />
+    <Tab.Screen name="Profile" component={ProfileStack} />
     <Tab.Screen name="Settings" component={SettingsStack} />
   </Tab.Navigator>
 );
@@ -60,12 +67,13 @@ const MainStack = () => (
 export const Navigation = () => {
   const token = useRootSelector((state) => state.auth.token);
   const appStack = token ? MainStack : SignInStack;
-  const {initialState, isReady, onStateChange} = usePersistedState();
+  const {initialState, isReady, onStateChange, onRef} = usePersistedState();
 
   return !isReady ? (
     <Loading />
   ) : (
     <NavigationContainer
+      ref={onRef}
       initialState={initialState}
       onStateChange={onStateChange}
       linking={linking}
