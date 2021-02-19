@@ -1,14 +1,14 @@
-import React from 'react';
-import {Text, Button} from 'react-native';
-import {Container} from '../../components';
-import {useRoute, RouteProp, useNavigation} from '@react-navigation/native';
-import {StackParams} from '../../navigation';
+import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
+import React, {ReactElement} from 'react';
+import {Button, Text} from 'react-native';
+import {Container} from '../../components';
+import {StackParams} from '../../navigation';
 
 type NavigationProps = StackNavigationProp<StackParams, 'Details'>;
 type RouteProps = RouteProp<StackParams, 'Details'>;
 
-export function Details() {
+export function Details(): ReactElement {
   const {push, popToTop, navigate, goBack} = useNavigation<NavigationProps>();
   const {params} = useRoute<RouteProps>();
 

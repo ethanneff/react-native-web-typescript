@@ -1,8 +1,8 @@
-import './GestureHandler';
-import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-import {Home, Details} from '../screens';
+import {createStackNavigator} from '@react-navigation/stack';
+import React, {ReactElement} from 'react';
+import {Details, Home} from '../screens';
+import './GestureHandler';
 
 export type StackParams = {
   Home: undefined;
@@ -11,7 +11,7 @@ export type StackParams = {
 
 const Stack = createStackNavigator<StackParams>();
 
-export function Navigation() {
+export function Navigation(): ReactElement {
   return (
     <NavigationContainer>
       <Stack.Navigator>
