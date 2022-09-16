@@ -1,6 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import React, {ReactElement} from 'react';
+import {ReactElement} from 'react';
 import {Details, Home} from '../screens';
 import './GestureHandler';
 

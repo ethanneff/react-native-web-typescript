@@ -1,6 +1,6 @@
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
-import React, {ReactElement} from 'react';
+import {ReactElement} from 'react';
 import {Button, Text} from 'react-native';
 import {Container} from '../../components';
 import {StackParams} from '../../navigation';
